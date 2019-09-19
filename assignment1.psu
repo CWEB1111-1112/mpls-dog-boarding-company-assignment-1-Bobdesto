@@ -1,0 +1,62 @@
+//Bobdesto Che
+START
+
+      DECLARATIONS
+            num idNumber, age,numberOfWeeks, EXIT, WeightOfDog, costPerWeek, fee1, fee2, fee3, fee4, factor, final
+            string dogName, breed
+            num EXIT = 0
+            
+            OUTPUT "Welcome to MPLs Dog Boarding Company"
+            OUTPUT "Please input your id number"   //primer
+            INPUT id number
+            
+            WHILE id number != EXIT
+            OUTPUT "Please enter the dog name"
+            INPUT dog name
+            OUTPUT "Please enter the Breed"
+            INPUT breed
+            OUTPUT "Please enter the age"
+            INPUT age
+            OUTPUT "please enter the number Of weeks the Dog will need care"
+            INPUT  number of weeks
+            OUTPUT "please enter the weight of dog"
+            INPUT "Weight of dog"
+            
+            IF (weight of dog < 14 )
+                calculate fee 1 * factor
+                OUTPUT "final"
+                OUTPUT "please enter the id number or 0 for EXIT"
+                INPUT id number
+                
+            ELSE 
+            
+            IF (weight of dog < 30)
+                calculate fee 2 * factor
+                OUTPUT "final"
+                OUTPUT "please enter the id number or 0 for EXIT"
+                INPUT id number
+            
+            ELSE
+            
+            IF (WeightOfDog < 80)
+                calculate fee 3 * factor
+                OUTPUT "final"
+                OUTPUT "please enter the idNumber or 0 for EXIT"
+                INPUT idNumber
+                
+            ELSE (calculate final = fee 4 * factor)
+                OUTPUT "you will receive a 2% discount on your overall bill."
+                OUTPUT "final"
+                OUTPUT "please enter the id number or 0 for EXIT"
+                INPUT id number
+                
+            ENDWHILE
+            
+            OUTPUT "program has concluded"
+            
+STOP
+                 
+                 
+                 
+            
+            

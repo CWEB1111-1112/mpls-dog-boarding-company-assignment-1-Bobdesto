@@ -4,12 +4,63 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="checheb"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2019-09-13 02:06:45 PM"/>
+        <attribute name="saved" value="2019-09-19 04:05:47 PM"/>
         <attribute name="created" value="Y2hlY2hlYjsxOTIwOUNORDgyNTk0UlA7MjAxOS0wOS0xMzswMjowNjoyMSBQTTsyODkw"/>
-        <attribute name="edited" value="Y2hlY2hlYjsxOTIwOUNORDgyNTk0UlA7MjAxOS0wOS0xMzswMjowNjo0NSBQTTsxOzMwMDQ="/>
+        <attribute name="edited" value="Y2hlY2hlYjsxOTIwOUNORDgyNTk0UlA7MjAxOS0wOS0xOTswNDowNTo0NyBQTTsyNTszMDY3"/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
-        <body/>
+        <body>
+            <declare name="IdNumber, age, numberOfWeeks, weightOfDog, costPerWeek, fee1, fee2, fee3, fee4, factor, final, EXIT" type="Integer" array="False" size=""/>
+            <declare name="dogName, breed" type="String" array="False" size=""/>
+            <assign variable="EXIT" expression="0"/>
+            <assign variable="fee1" expression="55"/>
+            <assign variable="fee2" expression="75"/>
+            <assign variable="fee3" expression="105"/>
+            <assign variable="fee4" expression="125"/>
+            <output expression="&quot;Welcome to MPLS Dog Boarding Company!&quot;" newline="True"/>
+            <output expression="&quot;please input your IDnumber&quot;" newline="True"/>
+            <input variable="IdNumber"/>
+            <while expression="idNumber &lt;&gt; EXIT">
+                <output expression="&quot;Please enter the Dogname&quot;" newline="True"/>
+                <input variable="dogName"/>
+                <output expression="&quot;please enter the breed&quot;" newline="True"/>
+                <input variable="breed"/>
+                <output expression="&quot;Please enter the age&quot;" newline="True"/>
+                <input variable="age"/>
+                <output expression="&quot;please enter the numberOfWeeks the Dog will need care&quot;" newline="True"/>
+                <input variable="numberOfWeeks"/>
+                <assign variable="factor" expression="numberOfWeeks"/>
+                <output expression="&quot;please enter the weightOfDog&quot;" newline="True"/>
+                <input variable="weightOfDog"/>
+                <if expression="weightOfDog &lt; 14">
+                    <then>
+                        <assign variable="final" expression="fee1 * factor"/>
+                    </then>
+                    <else>
+                        <if expression="weightOfDog &lt; 30">
+                            <then>
+                                <assign variable="final" expression="fee2 * factor"/>
+                            </then>
+                            <else>
+                                <if expression="weightOfDog &lt; 80">
+                                    <then>
+                                        <assign variable="final" expression="fee3 * factor"/>
+                                    </then>
+                                    <else>
+                                        <assign variable="final" expression="fee4 * factor"/>
+                                        <output expression="&quot;you will receive a 2% discount on your overall bill.&quot;" newline="True"/>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+                <output expression="final" newline="True"/>
+                <output expression="&quot;please enter the idNumber or 0 for EXIT &quot;" newline="True"/>
+                <input variable="idNumber"/>
+            </while>
+            <output expression="&quot;The program has concluded.&quot;" newline="True"/>
+        </body>
     </function>
 </flowgorithm>
